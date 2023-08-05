@@ -1,0 +1,173 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 6,
+        "name": "Setup for logging in company",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1532100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Validating login functionality with valid credentials",
+            "match": {
+              "location": "steps.PaginationSteps.validating_login_functionality_with_valid_credentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User logged in with username \"student@mindtekbootcamp.com\" and password \"ilovejava\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"student@mindtekbootcamp.com\"",
+                  "offset": 29
+                },
+                {
+                  "val": "\"ilovejava\"",
+                  "offset": 72
+                }
+              ],
+              "location": "steps.PaginationSteps.user_logged_in_with_username_and_password(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User is successfully logged in",
+            "match": {
+              "location": "steps.PaginationSteps.user_is_successfully_logged_in()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-08-01T01:18:05.762Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2011700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Validation company information",
+        "description": "",
+        "id": "validation-company;validation-company-information",
+        "after": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 14,
+            "name": "User creates company \"Withards\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 15,
+            "name": "User validates created company exists",
+            "match": {},
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 16,
+            "name": "User changes MC number",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 17,
+            "name": "User validates if changed MC number exists in the database",
+            "match": {},
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@regression"
+          },
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@MB88-48"
+          },
+          {
+            "name": "@M88-49"
+          }
+        ]
+      }
+    ],
+    "name": "Validation company",
+    "description": "",
+    "id": "validation-company",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/JDBCProject.feature",
+    "tags": [
+      {
+        "name": "@regression",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 2
+        }
+      },
+      {
+        "name": "@smoke",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 14
+        }
+      },
+      {
+        "name": "@MB88-48",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 21
+        }
+      }
+    ]
+  }
+]
