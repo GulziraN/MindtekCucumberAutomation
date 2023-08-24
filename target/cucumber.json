@@ -1,84 +1,31 @@
 [
   {
-    "line": 3,
+    "line": 1,
     "elements": [
       {
-        "line": 6,
-        "name": "Setup for logging in company",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 1532100,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "Validating login functionality with valid credentials",
-            "match": {
-              "location": "steps.PaginationSteps.validating_login_functionality_with_valid_credentials()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 8,
-            "name": "User logged in with username \"student@mindtekbootcamp.com\" and password \"ilovejava\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"student@mindtekbootcamp.com\"",
-                  "offset": 29
-                },
-                {
-                  "val": "\"ilovejava\"",
-                  "offset": 72
-                }
-              ],
-              "location": "steps.PaginationSteps.user_logged_in_with_username_and_password(java.lang.String,java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "User is successfully logged in",
-            "match": {
-              "location": "steps.PaginationSteps.user_is_successfully_logged_in()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2023-08-01T01:18:05.762Z",
+        "start_timestamp": "2023-08-16T01:07:00.589Z",
         "before": [
           {
             "result": {
-              "duration": 2011700,
+              "duration": 1036300,
               "status": "passed"
             },
             "match": {
-              "location": "steps.Hooks.setUp()"
+              "location": "steps.Hooks.setUp(io.cucumber.java.Scenario)"
             }
           }
         ],
-        "line": 13,
-        "name": "Validation company information",
+        "line": 56,
+        "name": "Validating DELETE booking API call with no authorization token",
         "description": "",
-        "id": "validation-company;validation-company-information",
+        "id": "validating-booking-api-calls;validating-delete-booking-api-call-with-no-authorization-token",
         "after": [
           {
             "result": {
               "status": "passed"
             },
             "match": {
-              "location": "steps.Hooks.tearDown()"
+              "location": "steps.Hooks.tearDown(io.cucumber.java.Scenario)"
             }
           }
         ],
@@ -87,87 +34,106 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 2499368100,
+              "status": "passed"
             },
-            "line": 14,
-            "name": "User creates company \"Withards\"",
-            "match": {},
+            "line": 57,
+            "name": "user creates booking with POST API call with data",
+            "match": {
+              "location": "steps.BookingAPISteps.user_creates_booking_with_post_api_call_with_data(io.cucumber.datatable.DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "firstname",
+                  "Sabrina"
+                ]
+              },
+              {
+                "cells": [
+                  "lastname",
+                  "Dashel"
+                ]
+              },
+              {
+                "cells": [
+                  "totalprice",
+                  "100"
+                ]
+              },
+              {
+                "cells": [
+                  "checkin",
+                  "2013-01-01"
+                ]
+              },
+              {
+                "cells": [
+                  "checkout",
+                  "2013-02-02"
+                ]
+              },
+              {
+                "cells": [
+                  "additionalneeds",
+                  "Pool"
+                ]
+              }
+            ],
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 217314200,
+              "status": "passed"
             },
-            "line": 15,
-            "name": "User validates created company exists",
-            "match": {},
+            "line": 64,
+            "name": "user deletes created booking with DELETE API call without authorization token",
+            "match": {
+              "location": "steps.BookingAPISteps.user_deletes_created_booking_with_delete_api_call_without_authorization_token()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 35192400,
+              "status": "passed"
             },
-            "line": 16,
-            "name": "User changes MC number",
-            "match": {},
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
+            "line": 65,
+            "name": "User validates 403 status code",
+            "match": {
+              "arguments": [
+                {
+                  "val": "403",
+                  "offset": 15
+                }
+              ],
+              "location": "steps.BookingAPISteps.user_validates_status_code(java.lang.Integer)"
             },
-            "line": 17,
-            "name": "User validates if changed MC number exists in the database",
-            "match": {},
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@regression"
+            "name": "@MB8-106"
           },
           {
             "name": "@smoke"
           },
           {
-            "name": "@MB88-48"
+            "name": "@regression"
           },
           {
-            "name": "@M88-49"
+            "name": "@api"
           }
         ]
       }
     ],
-    "name": "Validation company",
+    "name": "Validating booking api calls",
     "description": "",
-    "id": "validation-company",
+    "id": "validating-booking-api-calls",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/JDBCProject.feature",
-    "tags": [
-      {
-        "name": "@regression",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 2
-        }
-      },
-      {
-        "name": "@smoke",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 14
-        }
-      },
-      {
-        "name": "@MB88-48",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 21
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/BookingAPITests.feature",
+    "tags": []
   }
 ]
